@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "lemon", sans-serif;
+}
+
+.corpo-form{
+    background-color: rgb(181, 179, 179);
+    width: 100%;
+    min-height: 100vh; /* tamanho do documento/tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner{
+    background-color: rgb(252, 252, 252);
+    border-radius: 10px;
+    margin: 14px;
+    max-width: 600px;
+    width: 100%;
+    border: solid 3px rgb(250, 241, 76);
+    box-shadow: 7px 7px 7px rgb(78, 77, 78);
+}
+
+.header{
+    border-radius: 10px;
+    background: linear-gradient(0deg, #8b0000 0%, #d42a2a 100%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.form{
+    padding: 20px;
+}
+
+.form-cont{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.form-cont label{
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-cont input{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: inset 3px rgb(240, 228, 4);
+    border: outset 3px rgb(254, 243, 36);
+    padding: 9px;
+}
+
+.msg-error{
+    color: #ff3b25;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    display: none;
+}
+
+.form button{
+    background: linear-gradient(0deg, #d42a2a 0%, #8b0000 100%); 
+    color: white;
+    width: 100%;
+    border: 0;
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.form button:active{
+    transform: scale(0.91);
+
+}
+
+.msg-error input{
+    border-color: #ff3b25;
+}
+
+/* Galeria */
+
+body{
+    background-color: rgb(181, 179, 179);
+}
+
+.cabeça-gal{
+    height: 140px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: #8b0000;
+}
+
+.cabeça-gal h1{
+    text-shadow: 6px 6px 6px rgb(78, 77, 78);
+}
+
+.galeria-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.7vw;
+    padding: 0 2vh;
+}
+
+.galeria-items{
+    position: relative;
+    width: 340px;
+    height: 250px;
+    border: inset 5px rgb(240, 228, 4);
+    border: outset 5px rgb(254, 243, 36);
+    border-radius: 5px;
+    flex-grow: 1;
+    transition: transform 1s linear;
+    overflow: hidden;
+}
+
+.galeria-items img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-items:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px rgb(78, 77, 78);
+
+}
+
+.tit-imgs{
+    position: absolute;
+    text-shadow: 0px 4px 4px rgb(254, 243, 36);
+    color:  #8b0000;
+
+}
+
+.tit-imgs2{
+    position: absolute;
+    text-shadow: 0px 4px 4px #8b0000;
+    color: rgb(254, 243, 36);
+
+}
+
+footer{
+    padding: 2.7em;
+    text-align: center;
+}
+
+.footer-1{
+    color: rgb(240, 228, 4);
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.footer-2{
+    color:  #8b0000;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/* MODAL */
+
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 99; /* Fica sobre tudo (camada superior) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Adiciona rolagem se o conteúdo for maior que a tela */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Imagem dentro do modal */
+.conteudoImg {
+    display: block;/* Mostra como bloco (imagem centralizada) */
+    margin: 5% auto; /* Espaço no topo e centralização horizontal */
+    max-width: 90%; /* Nunca ultrapassa 90% da tela */
+    max-height: 80vh; /* Nunca ultrapassa 80% da altura da tela */
+    border: outset 5px rgb(139, 0, 0);
+    border-radius: 10px;
+}
+
+.modal-tit{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 6px 6px rgb(168, 162, 168);
+    margin-bottom: 1em;
+}
+
+/* Botão de fechar */
+.fecha {
+    position: absolute;
+    top: 20px;
+    right: 40px; /* Vai para o canto superior direito do modal */
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.fecha:hover {
+    color: #ff0000;
+}
+
+.botoes{
+    min-height: 20vh;
+    text-align: center;
+}
+
+.edit{
+    color: white;
+    background-color: rgb(240, 228, 4);
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.edit:active{
+    transform: scale(0.91);
+}
+
+.excl{
+    color: white;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.excl:active{
+    transform: scale(0.91);
+}
+
